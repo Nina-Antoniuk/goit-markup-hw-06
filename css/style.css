@@ -114,8 +114,10 @@ address {
 
 .conteiner {
   width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .section-title {
@@ -531,9 +533,11 @@ address {
 }
 
 /* footer */
+
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  color: var(--light-text-color);
   background-color: var(--bg-accent);
 }
 
@@ -543,29 +547,28 @@ address {
 }
 
 .flex-item {
-  width: calc((100% - 30px) / 2);
+  margin-right: 30px;
+  width: calc((50% - 45px) / 2);
 }
 
-.flex-item:not(:last-child) {
-  margin-right: 30px;
+.flex-item:last-child {
+  flex-grow: 1;
+  margin-right: 0;
 }
 
 .contacts {
   margin-top: 20px;
-  color: var(--light-text-color);
 }
 
 .contacts a {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.join {
+.footer-title {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--light-text-color);
 }
 
 .footer-social-link {
@@ -574,6 +577,27 @@ address {
 
 .footer-social-link .icon {
   fill: var(--light-text-color);
+}
+
+.subscription {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscription input:focus,
+.subscription button:focus {
+  outline: 2px solid var(--light-text-color);
+}
+
+.subscription input {
+  padding: 15px;
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--light-text-color);
+  background-color: transparent;
 }
 
 /* modal */
