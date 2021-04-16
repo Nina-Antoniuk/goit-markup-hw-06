@@ -25,9 +25,9 @@
 
 body {
   font-family: var(--main-font);
-  letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -42,6 +42,7 @@ h6,
 p {
   margin-top: 0;
 }
+
 .link {
   color: var(--prime-text-color);
   text-decoration: none;
@@ -62,17 +63,20 @@ p {
   content: '';
   position: absolute;
   top: 46px;
+  left: 0;
+
   display: block;
   width: 100%;
   height: 4px;
+
   border-radius: 2px;
   background-color: var(--text-accent);
 }
 
 .list {
-  list-style-type: none;
   margin: 0;
   padding-left: 0;
+  list-style-type: none;
 }
 
 .visually-hidden {
@@ -99,8 +103,8 @@ address {
 }
 
 .img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
   height: auto;
 }
 
@@ -114,10 +118,10 @@ address {
 
 .conteiner {
   width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .section-title {
@@ -140,9 +144,9 @@ address {
 }
 
 .grid-item {
+  flex-basis: calc((100% - var(--elements) * var(--gap)) / var(--elements));
   margin-top: var(--gap);
   margin-left: var(--gap);
-  flex-basis: calc((100% - var(--elements) * var(--gap)) / var(--elements));
 }
 
 .social-list {
@@ -169,14 +173,11 @@ address {
 }
 
 /* header */
-
 .page-header {
   padding-top: 24px;
   padding-bottom: 25px;
-
   letter-spacing: 0.02em;
   line-height: 1.17;
-
   border-bottom: 1px solid var(--header-line-color);
 }
 
@@ -230,13 +231,11 @@ address {
 
 /* studio */
 .hero {
-  max-width: 1600px;
-  height: 600px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
+  max-width: 1600px;
+  height: 600px;
   margin-right: auto;
   margin-left: auto;
 
@@ -262,24 +261,27 @@ address {
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero-button,
+.form-button {
   min-width: 200px;
   padding: 10px 32px;
 
   font-size: 16px;
   line-height: 1.87;
 
-  color: inherit;
-  background-color: var(--text-accent);
   border: none;
   border-radius: var(--border-radius);
+  color: inherit;
+  background-color: var(--text-accent);
   cursor: pointer;
 
   transition: background-color var(--duration) var(--cubic);
 }
 
 .hero-button:hover,
-.hero-button:focus {
+.hero-button:focus,
+.form-button:hover,
+.form-button:focus {
   background-color: #188ce8;
 }
 
@@ -383,7 +385,6 @@ address {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
-
   transition: fill var(--duration) var(--cubic);
 }
 
@@ -397,16 +398,14 @@ address {
 }
 
 .customers-link {
-  width: 170px;
-  height: 90px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 170px;
+  height: 90px;
 
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-
   transition: border var(--duration) var(--cubic);
 }
 
@@ -426,7 +425,6 @@ address {
 }
 
 /* portfolio */
-
 .filter-list {
   display: flex;
   justify-content: center;
@@ -439,16 +437,13 @@ address {
 
 .btn {
   padding: 6px 22px;
-
   font-size: 16px;
   line-height: 1.62;
 
   border: none;
   border-radius: var(--border-radius);
-
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
-
   cursor: pointer;
   transition: background-color var(--duration) var(--cubic),
     color var(--duration) var(--cubic), box-shadow var(--duration) var(--cubic);
@@ -469,9 +464,9 @@ address {
 
 .works-item-link:hover,
 .works-item-link:focus {
+  color: currentColor;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  color: currentColor;
 }
 
 .image-wrapp {
@@ -533,7 +528,6 @@ address {
 }
 
 /* footer */
-
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -556,6 +550,14 @@ address {
   margin-right: 0;
 }
 
+.footer-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+/* contacts block */
 .contacts {
   margin-top: 20px;
 }
@@ -564,13 +566,7 @@ address {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-title {
-  margin-bottom: 20px;
-  font-weight: bold;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
+/* footer social links */
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -579,6 +575,7 @@ address {
   fill: var(--light-text-color);
 }
 
+/* footer form */
 .subscription {
   display: flex;
   justify-content: space-between;
@@ -590,9 +587,9 @@ address {
 }
 
 .subscription input {
-  padding: 15px;
   width: 358px;
   height: 50px;
+  padding: 15px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -600,11 +597,21 @@ address {
   background-color: transparent;
 }
 
-/* modal */
+.form-button {
+  display: flex;
+}
 
+.form-button .icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+/* backdrop */
 .backdrop {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
 
   width: 100vw;
@@ -621,16 +628,14 @@ address {
   visibility: hidden;
 }
 
+/* modal */
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
-  min-height: 380px;
-  padding: 30px;
-
+  padding: 40px;
   background-color: #fff;
   opacity: 1;
 
@@ -648,15 +653,16 @@ address {
   top: 8px;
   right: 8px;
 
-  width: 30px;
-  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 30px;
+  height: 30px;
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--light-text-color);
+  cursor: pointer;
 }
 
 .modal-btn .icon {
@@ -664,4 +670,134 @@ address {
   width: 18px;
   height: 18px;
   fill: #000;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .icon,
+.modal-btn:focus .icon {
+  fill: var(--text-accent);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.form-field-wrapper {
+  position: relative;
+}
+
+.form-field-wrapper .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field {
+  display: block;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--title-text-color);
+  cursor: pointer;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus {
+  outline: 1px solid var(--text-accent);
+}
+
+.input-field {
+  height: 40px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+}
+
+.input-field:focus + .icon {
+  fill: var(--text-accent);
+}
+
+.massage-field {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  resize: none;
+}
+
+.condition-acceptance {
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.condition-acceptance::before {
+  content: '';
+  display: inline-flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  background-color: inherit;
+
+  transition: background-color var(--duration) var(--cubic),
+    border-color var(--duration) var(--cubic),
+    outline var(--duration) var(--cubic);
+}
+
+.license-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.license-checkbox:checked + .condition-acceptance::before {
+  background-image: url(../images/icons/icon-checkbox.svg);
+  background-position: center center;
+  background-origin: padding-box;
+  border-color: transparent;
+  background-color: var(--text-accent);
+}
+
+.license-checkbox:focus + .condition-acceptance::before {
+  outline: 1px solid var(--text-accent);
+}
+
+.license-checkbox:checked:focus + .condition-acceptance::before {
+  outline: 1px solid var(--title-text-color);
+}
+
+.condition-acceptance a {
+  color: var(--text-accent);
+}
+
+.modal-form .form-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  color: var(--light-text-color);
 }
