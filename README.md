@@ -1,9 +1,9 @@
-# Homework 6
+# Домашне завдання 6
+## Тема: Розмітка і стилізація форм
 Завдання виконано відповідно до ТЗ - https://github.com/goitacademy/html-css-homework/tree/master/6-forms
 
-Технології:
+## Технології:
  - HTML;
  - CSS;
-
-Додатково:
- - prittier;
+ - flexbox;
+ - svg;
